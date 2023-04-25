@@ -1,0 +1,161 @@
+/* Styles for Travel Journal */
+/* General Element Styles */
+:root {
+    --body-color: #f4e8c7;
+    --nav-bg-color: #c7af71;
+    --nav-logo-color: #1d120e;
+    --nav-box-shadow-rgb: 119, 110, 88;
+    --entry-background-color: #e5d6b7;
+    --entry-shadow-rgb: 187, 178, 107;
+    --entry-color: #402718;
+    --entry-country-color: #ec6d6d;
+    --entry-link-color: #7f8d9b;
+    --entry-location-color: #7da7ad;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    background-color: var(--body-color, beige);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--nav-bg-color, brown);
+    box-shadow: -1px 4px 10px 3px rgba(var(--nav-box-shadow-rgb, brown), 0.68);
+}
+
+.nav--logo {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin: 1em;
+}
+
+.nav--logo-icon {
+    height: 3em;
+    /* Filter used to make the earth icon in the logo the same colour as the rest of the logo */
+    filter: invert(6%) sepia(6%) saturate(4175%) hue-rotate(330deg) brightness(97%) contrast(95%);
+}
+
+.nav--title {
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: .25em;
+    color: var(--nav-logo-color, black);
+}
+
+/* Styles for main content of page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    min-width: 100vw;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    gap: 1em;
+}
+
+/* Styles for Entry Component and parts */
+.entry {
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--entry-background-color, beige);
+    box-shadow: 0px 9px 5px 0px rgba(var(--entry-shadow-rgb, black), 0.75);
+    color: var(--entry-color, black);
+}
+
+.entry--img {
+    height: 300px;
+    width: 200px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.entry--meta {
+    display: flex;
+    gap: .25em;
+    align-items: center;
+}
+
+.entry--location-icon {
+    width: .8em;
+    filter: invert(11%) sepia(51%) saturate(1036%) hue-rotate(345deg) brightness(89%) contrast(85%);
+}
+
+.entry--country {
+    color: var(--entry-country-color, black);
+    margin: 0;
+}
+
+.entry--location-link {
+    margin-left: .5em;
+    font-size: 1em;
+    font-style: italic;
+    text-decoration: none;
+    color: var(--entry-link-color, blue);
+}
+
+.entry--location-link:hover {
+    text-decoration: underline;
+}
+
+.entry--info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1em;
+}
+
+.entry--location {
+    letter-spacing: .08em;
+    font-family: "Corben", cusive;
+    color: var(--entry-location-color, teal);
+}
+
+.entry--date {
+    font-style: italic;
+    margin: 0.1em;
+    font-size: 0.8em;
+}
+
+.entry--description {
+    text-overflow: ellipsis;
+}
+
+/* Media Queries */
+@media (max-width: 650px) {
+    html {
+        overflow-x: visible;
+    }
+
+    .entry--img {
+        width: 100px;
+        height: 200px;
+    }
+}
+
