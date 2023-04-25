@@ -1,6 +1,6 @@
 # Travel Journal React Page
 
-A Travel Journal webpage made in React. Made primarily to practice the process of generating comoponents with custom contents using props. The page can be viewed [here](https://splendid-malasada-6e9983.netlify.app/).
+A Travel Journal webpage made in React. Made primarily to practice the process of generating comoponents with custom contents using props. The page can be viewed [here](https://symphonious-pithivier-938581.netlify.app/).
 
 ## Assets Used
 
